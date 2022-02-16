@@ -1,0 +1,30 @@
+<p class="fs-1">Listado de Bitcoins por rango</p>
+<div class="col-12 animate_animated animate_FadeIn">
+    <div class="card w-100">
+       <div class="d-flex align-items-center justify-content-center card-body">
+           <table>
+            <tr class="bg-dark">
+                <th class="text-light">Logo</th>
+                <th class="text-light">ID</th>
+                <th class="text-light">Nombre</th>
+                <th class="text-light">Precio</th>
+                <th class="text-light">Rango</th>
+                <th class="text-light">Detalles</th>
+            </tr>
+               <tr *ngFor="let mpj of resultadoAPI ; let i = index">
+                <td><img width="50px" height="50px" [src]="mpj.logo_url"
+                    [alt]="mpj.name"
+                    class="car-img-top"
+                    ></td>
+                <td>{{mpj.id}}</td>
+                <td>{{mpj.name}}</td>
+                <td>{{mpj.price}} $</td>
+                <td>{{mpj.rank}}</td>
+                <td class="imag">
+                    <a [routerLink]="['/datos', mpj.id]">Ver datos
+                    </a></td>
+            </tr>
+    </table>
+       </div>
+    </div>
+</div>

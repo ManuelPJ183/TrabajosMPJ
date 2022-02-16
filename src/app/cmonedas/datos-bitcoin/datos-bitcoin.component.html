@@ -1,0 +1,49 @@
+<div>
+<table cellspacing="0" cellpadding="1" class="table table-hover">
+
+    <thead>
+
+        <tr>
+
+            <th> # </th>
+
+            <th> IDS </th>
+
+            <th> Nombre </th>
+
+            <th> Precio </th>
+
+            <th> Rango </th>
+
+            <th> Numero de intercambios </th>
+
+            <th> Simbolo </th>
+
+            <th> Volumen </th>
+
+            <th> Estado </th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let def of datosd; let i = index">
+                <td><img width="50px" height="50px" [src]="def.logo_url"
+                    [alt]="def.name"
+                    class="car-img-top"
+                    ></td>
+                <td>{{def.id}}</td>
+                <td>{{def.name}}</td>
+                <td>{{def.price}} $</td>
+                <td>{{def.rank}}</td>
+                <td>{{def.num_exchanges}}</td>
+                <td>{{def.symbol}}</td>
+                <td>{{def.ytd.volume}} $</td>
+                <td>{{def.status}}</td>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>

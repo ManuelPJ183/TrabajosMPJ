@@ -1,0 +1,34 @@
+table, tr, th, td{
+    text-align: center;
+    padding: auto;
+    }
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+p{
+    cursor: pointer;
+}
+@media screen and (max-width:1090px) {
+  div {
+    width: 500px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    border: 1px solid black;
+    }
+    th, td { min-width: 100px; }
+    }
+    .scroll::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .scroll::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    
+    .scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar {
+        width: 15px;
+    }

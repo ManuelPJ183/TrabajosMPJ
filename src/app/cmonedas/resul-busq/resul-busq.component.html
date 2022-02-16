@@ -1,0 +1,34 @@
+<div class="col-12 animate_animated animate_FadeIn">
+    <div class="card w-100">
+       <div *ngIf="criptoServ.Encontrar" class="d-flex flex-nowrap align-items-center justify-content-center card-body">
+           <table>
+            <tr class="bg-dark">
+                <th class="text-light">Logo</th>
+                <th class="text-light">ID</th>
+                <th class="text-light">Nombre</th>
+                <th class="text-light">Precio</th>
+                <th class="text-light">Rango</th>
+                <th class="text-light">Detalles</th>
+            </tr>
+               <tr *ngFor="let mpj of resultadoAPI ; let i = index">
+                <td><img width="50px" height="50px" [src]="mpj.logo_url"
+                    [alt]="mpj.name"
+                    class="car-img-top"
+                    ></td>
+                <td>{{mpj.id}}</td>
+                <td>{{mpj.name}}</td>
+                <td>{{mpj.price}} $</td>
+                <td>{{mpj.rank}}</td>
+                <td class="imag">
+                    <a [routerLink]="['/datos', mpj.id]">Ver datos
+                    </a></td>
+            </tr>
+    </table>
+       </div>
+       <div class="w-100" *ngIf="criptoServ.noFound">
+        <div class="w-100"><p class="card-text text-center w-100">
+            No se ha encontrado el recurso solicitado
+        </p></div>
+    </div>
+    </div>
+</div>

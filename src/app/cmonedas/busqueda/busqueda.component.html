@@ -1,0 +1,8 @@
+<p class="fs-1">Buscar por Bitcoin</p>
+<div class="w-100 d-flex">
+<input type="text" class="form-control" placeholder="Buscar Bitcoins..." [(ngModel)]="valor" (keyup.enter)="buscarD()">
+<button (click)="buscarD()">Buscar</button>
+</div>
+<div class="w-100">
+<app-resul-busq></app-resul-busq>
+</div>

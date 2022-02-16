@@ -1,0 +1,8 @@
+table, tr, th, td{
+    border: 1px solid black;
+    text-align: center;
+    padding: auto;
+    }
+    .img {
+        background-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE4a6Gdb27qg36fy5L7l6knwbjxE9dZv1K1g&usqp=CAU";
+    }

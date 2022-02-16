@@ -1,0 +1,52 @@
+<div class="w-100 border-right p-3" id="sidebar">
+
+    <h3 class="text-dark">
+
+        Busqueda
+
+    </h3>
+
+    <hr class="text-secondary" />
+        <ul class="list-group">
+        <!-- Este primer RouterLink es igual a "" porque tal y como tenemos en el app-routing.module.ts,
+            al buscar por pais el path es "" y por eso es obligatorio usar el 
+            [routerLinkActiveOptions]="{ exact: true }" -->
+        
+            <li routerLink="buscar"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                class="list-group-item"><svg preserveAspectRatio="xMaxYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>  Busqueda libre
+            </li>
+             
+            <li routerLink="listar"
+                routerLinkActive="active"
+                class="list-group-item"><svg preserveAspectRatio="xMaxYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>  Busqueda por criptomonedas
+            </li>
+        </ul>
+        <br>
+        <br>
+    <h3 class="text-dark">
+
+        Historial
+
+    </h3>
+    <hr class="text-secondary" />
+
+
+    <div *ngFor="let resu of Historial ; let i = index">
+        <div class="bg-primary" *ngIf="i < 5">
+
+        <p [routerLink]="['/datos', resu]" class="px-1 py-2 mx-2 my-1 fs-4">
+
+            {{resu}}
+
+        </p>
+          
+    </div>
+</div>
+</div>
+    

@@ -1,0 +1,17 @@
+#sidebar {
+    height: 100%;
+    min-height: 100vh;
+    min-width: 200px;
+    background: #14CCD4 !important;
+
+}
+li{
+    cursor: pointer;
+}
+p{
+    cursor: pointer;
+    color: #2c3c56;
+}
+.def{
+    background-color: #2c3c56;
+}
